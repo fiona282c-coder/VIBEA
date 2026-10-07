@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="description" content="VIBEA — AI beauty, makeup learning, styling and smart shopping." />
+  <meta name="theme-color" content="#fbf7f6" />
+  <title>VIBEA — Your look, your vibe.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="brand" data-go="home">VIBEA</button>
+      <nav class="desktop-nav">
+        <button data-go="home" data-i18n="navHome">首頁</button>
+        <button data-go="analyze" data-i18n="navAnalyze">AI 臉部分析</button>
+        <button data-go="looks" data-i18n="navLooks">妝容</button>
+        <button data-go="wardrobe" data-i18n="navStyle">穿搭</button>
+        <button data-go="shop" data-i18n="navShop">購物</button>
+        <button data-go="learn" data-i18n="navLearn">學習紀錄</button>
+      </nav>
+      <div class="top-actions">
+        <button id="langToggle" class="pill-btn" aria-label="Language">EN</button>
+        <button class="ghost-btn" data-go="guide" data-i18n="guide">使用指南</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page active" id="home">
+        <div class="hero">
+          <div class="hero-copy">
+            <span class="eyebrow">AI BEAUTY & STYLE COMPANION</span>
+            <h1><span data-i18n="hero1">找到你的風格。</span><br><span class="accent" data-i18n="hero2">用你已經擁有的，完成今天的 Look。</span></h1>
+            <p data-i18n="heroBody">VIBEA 從臉部特徵、膚況、你的化妝包與場合出發，幫你分析、學妝、試妝、搭配穿搭，並只在真的需要時推薦產品。</p>
+            <div class="hero-actions">
+              <button class="primary-btn" data-go="analyze" data-i18n="startAnalyze">開始臉部分析</button>
+              <button class="secondary-btn" data-go="guide" data-i18n="howToUse">先看怎麼用</button>
+            </div>
+            <div class="trust-row">
+              <span data-i18n="privacyFirst">照片可只在你的裝置上處理</span>
+              <span data-i18n="realCamera">支援相機拍照</span>
+              <span data-i18n="bilingual">中英雙語</span>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="editorial-card">
+              <div class="editorial-kicker">TODAY'S VIBE</div>
+              <div class="editorial-title">Soft Korean Glow</div>
+              <div class="editorial-grid">
+                <div><b>Skin</b><span>Water glow</span></div>
+                <div><b>Eyes</b><span>Soft brown</span></div>
+                <div><b>Blush</b><span>Peach rose</span></div>
+                <div><b>Lip</b><span>Glass tint</span></div>
+              </div>
+              <div class="editorial-note">Analyze → Learn → Try → Style → Track</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="quick-grid">
+          <button class="quick-card" data-go="analyze"><span>01</span><b data-i18n="qAnalyze">分析我的臉</b><small data-i18n="qAnalyzeSub">相機 / 上傳照片</small></button>
+          <button class="quick-card" data-go="bag"><span>02</span><b data-i18n="qBag">建立我的化妝包</b><small data-i18n="qBagSub">先用你已經有的</small></button>
+          <button class="quick-card" data-go="looks"><span>03</span><b data-i18n="qLooks">找今天的妝</b><small data-i18n="qLooksSub">8 種風格與妝效 tips</small></button>
+          <button class="quick-card" data-go="after"><span>04</span><b data-i18n="qAfter">畫完再分析</b><small data-i18n="qAfterSub">看看哪裡可以再調整</small></button>
+        </div>
+      </section>
+
+      <section class="page" id="guide">
+        <div class="page-head"><span class="eyebrow">START HERE</span><h2 data-i18n="guideTitle">VIBEA 使用指南</h2><p data-i18n="guideSub">第一次使用，照這個順序最快。</p></div>
+        <div class="steps-grid six">
+          <article class="step-card"><span>01</span><h3 data-i18n="g1">同意隱私說明</h3><p data-i18n="g1s">你可以選擇只在本機分析，照片不會自動公開。</p></article>
+          <article class="step-card"><span>02</span><h3 data-i18n="g2">拍一張正面照</h3><p data-i18n="g2s">自然光、正臉、不要用濾鏡，分析會比較穩。</p></article>
+          <article class="step-card"><span>03</span><h3 data-i18n="g3">看分析與 Top 1 妝容</h3><p data-i18n="g3s">分數是影像估計，不代表客觀美貌，也不做醫療診斷。</p></article>
+          <article class="step-card"><span>04</span><h3 data-i18n="g4">建立化妝包</h3><p data-i18n="g4s">輸入你已經有的底妝、腮紅、眼影與唇彩。</p></article>
+          <article class="step-card"><span>05</span><h3 data-i18n="g5">學妝、試妝、搭配穿搭</h3><p data-i18n="g5s">每個風格都有妝效 tips、教學連結與試妝。</p></article>
+          <article class="step-card"><span>06</span><h3 data-i18n="g6">記錄進步</h3><p data-i18n="g6s">標記學會的妝、常錯步驟與最近常用風格。</p></article>
+        </div>
+      </section>
+
+      <section class="page" id="analyze">
+        <div class="page-head"><span class="eyebrow">FACE ANALYSIS</span><h2 data-i18n="analysisTitle">臉部分析與美感評估</h2><p data-i18n="analysisSub">使用相機或照片。分析只針對可見特徵，避免推測年齡、族群、個性或健康狀況。</p></div>
+
+        <div class="privacy-box">
+          <div>
+            <h3>Your Beauty Data, Your Choice</h3>
+            <p data-i18n="privacyBody">VIBEA 需要你主動提供照片才能進行臉部分析。本版本預設在瀏覽器中處理照片，不會自動上傳到 VIBEA 伺服器；分析紀錄可選擇儲存在你的裝置。</p>
+            <details>
+              <summary data-i18n="privacyDetails">查看完整隱私說明</summary>
+              <div class="privacy-copy">
+                <h4>How we use your photo</h4>
+                <ul>
+                  <li>Analyze visible facial proportions, features, skin appearance, and makeup suitability.</li>
+                  <li>Generate and personalize your VIBEA beauty report.</li>
+                  <li>Only save a local analysis record if you choose to save it.</li>
+                </ul>
+                <h4>Your privacy</h4>
+                <ul>
+                  <li>Your photo is not publicly displayed.</li>
+                  <li>Your photo is not used for advertising.</li>
+                  <li>You can clear saved VIBEA data from this device at any time.</li>
+                  <li>Face scores are image-based estimates, not biometric identification or objective beauty measurements.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+          <label class="consent-line"><input type="checkbox" id="consentCheck" /> <span data-i18n="consentText">我已閱讀並同意隱私說明，並同意 VIBEA 為臉部分析處理我主動提供的照片。</span></label>
+        </div>
+
+        <div class="camera-layout">
+          <div class="camera-card">
+            <div class="camera-stage" id="cameraStage">
+              <video id="cameraVideo" playsinline autoplay muted hidden></video>
+              <canvas id="captureCanvas" hidden></canvas>
+              <img id="analysisPreview" alt="portrait preview" hidden />
+              <div id="cameraPlaceholder" class="camera-placeholder">
+                <div class="face-guide"></div>
+                <b data-i18n="cameraPrompt">請正面面向鏡頭</b>
+                <span data-i18n="cameraSub">自然光 · 無濾鏡 · 露出眉眼</span>
+              </div>
+            </div>
+            <div class="camera-actions">
+              <button id="openCameraBtn" class="primary-btn" data-i18n="openCamera">開啟相機</button>
+              <button id="captureBtn" class="secondary-btn" disabled data-i18n="takePhoto">拍照</button>
+              <label class="secondary-btn file-btn"><span data-i18n="uploadPhoto">上傳照片</span><input id="photoInput" type="file" accept="image/*" capture="user" hidden /></label>
+            </div>
+            <button id="runAnalysisBtn" class="primary-btn full" disabled data-i18n="runAnalysis">開始分析</button>
+            <div id="analysisStatus" class="status-line"></div>
+          </div>
+          <aside class="tip-card">
+            <h3 data-i18n="photoTips">拍攝建議</h3>
+            <ul>
+              <li data-i18n="tip1">臉部保持在畫面中央，避免頭髮遮住輪廓。</li>
+              <li data-i18n="tip2">不要開美肌或強濾鏡。</li>
+              <li data-i18n="tip3">光線不足會影響膚色、紋理與比例估計。</li>
+              <li data-i18n="tip4">黃金比例僅為 2D 影像近似，不是精密生物量測。</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div id="analysisReport" class="analysis-report" hidden>
+          <div class="overall-score-card"><div><span class="eyebrow">OVERALL SCORE</span><h3><span id="overallScore">—</span><small>/10</small></h3></div><p id="overallSummary"></p></div>
+          <div class="metrics-grid" id="faceMetrics"></div>
+          <div class="report-grid">
+            <article><h3 data-i18n="strengths">STRENGTHS</h3><ul id="strengthList"></ul></article>
+            <article><h3 data-i18n="improve">AREAS TO IMPROVE</h3><ul id="improveList"></ul></article>
+            <article class="wide"><h3 data-i18n="recommendations">RECOMMENDATIONS</h3><div id="recommendationList" class="recommend-list"></div></article>
+            <article class="wide"><h3 data-i18n="styleDirection">PERSONALIZED STYLE DIRECTION</h3><div id="styleDirectionList" class="style-direction-list"></div></article>
+          </div>
+          <div class="top-look-card"><span class="eyebrow">TOP 1 FOR YOU</span><h3 id="topLookName">—</h3><p id="topLookReason">—</p><div class="dual-actions"><button class="primary-btn" data-go="looks" data-i18n="viewLook">查看妝容</button><button class="secondary-btn" data-go="tryon" data-i18n="tryOnNow">立即試妝</button></div></div>
+        </div>
+      </section>
+
+      <section class="page" id="looks">
+        <div class="page-head"><span class="eyebrow">MAKEUP LIBRARY</span><h2 data-i18n="looksTitle">妝容風格與妝效 Tips</h2><p data-i18n="looksSub">每個風格都有妝效重點、教學連結，並可加入學習紀錄。</p></div>
+        <div class="look-grid" id="lookGrid"></div>
+      </section>
+
+      <section class="page" id="tutorials">
+        <div class="page-head"><span class="eyebrow">LEARN</span><h2 data-i18n="tutorialTitle">妝容教學</h2><p data-i18n="tutorialSub">依照風格分步學習，外部連結會另開新分頁。</p></div>
+        <div class="tutorial-grid" id="tutorialGrid"></div>
+      </section>
+
+      <section class="page" id="bag">
+        <div class="page-head"><span class="eyebrow">MY MAKEUP BAG</span><h2 data-i18n="bagTitle">先用你已經有的，再決定要不要買</h2><p data-i18n="bagSub">新增你手上的產品，VIBEA 會告訴你能完成哪些妝，並給你 Top 1。</p></div>
+        <div class="bag-layout">
+          <form id="bagForm" class="panel form-panel">
+            <h3 data-i18n="addProduct">新增化妝品</h3>
+            <label><span data-i18n="productName">產品名稱</span><input id="bagName" required placeholder="e.g. NARS Blush" /></label>
+            <label><span data-i18n="category">類別</span><select id="bagCategory"><option value="base">Base</option><option value="brow">Brow</option><option value="eye">Eye</option><option value="liner">Liner</option><option value="blush">Blush</option><option value="lip">Lip</option><option value="highlight">Highlight</option></select></label>
+            <label><span data-i18n="tone">色調 / 特徵</span><input id="bagTone" placeholder="peach, rose, brown, matte..." /></label>
+            <button class="primary-btn" type="submit" data-i18n="addToBag">加入化妝包</button>
+          </form>
+          <div class="panel">
+            <div class="panel-head"><h3 data-i18n="scanBag">拍你的化妝品</h3><span class="badge" data-i18n="semiAuto">半自動</span></div>
+            <p data-i18n="scanBagDesc">拍一張化妝品合照，VIBEA 會讀取主色調；為避免把品牌或品項辨識錯誤，請你再勾選照片中有哪些類別。</p>
+            <label class="upload-mini"><input id="bagPhotoInput" type="file" accept="image/*" capture="environment" hidden><span data-i18n="takeBagPhoto">拍照 / 上傳</span></label>
+            <img id="bagPhotoPreview" class="bag-photo" hidden alt="makeup bag preview" />
+            <div class="category-checks" id="bagScanCategories"></div>
+            <button id="useScanBtn" class="secondary-btn full" disabled data-i18n="useScan">加入掃描結果</button>
+          </div>
+        </div>
+        <div class="panel"><div class="panel-head"><h3 data-i18n="myItems">我的產品</h3><button id="clearBagBtn" class="text-btn" data-i18n="clear">清除</button></div><div id="bagItems" class="bag-items"></div></div>
+        <div class="top-look-card"><span class="eyebrow">TOP 1 FROM YOUR BAG</span><h3 id="bagTopLook">—</h3><p id="bagTopReason" data-i18n="bagEmpty">先新增至少 2 項產品，我們會開始配對。</p><div id="bagCompatibleLooks" class="mini-tags"></div></div>
+      </section>
+
+      <section class="page" id="tryon">
+        <div class="page-head"><span class="eyebrow">VIRTUAL TRY-ON</span><h2 data-i18n="tryonTitle">簡易即時試妝</h2><p data-i18n="tryonSub">使用你剛才的分析照片與臉部定位，在嘴唇與雙頰疊加顏色。這是視覺模擬，不代表實際產品上臉效果。</p></div>
+        <div class="tryon-layout">
+          <div class="tryon-stage"><canvas id="tryonCanvas" width="800" height="900"></canvas><div id="tryonEmpty" class="empty-overlay" data-i18n="tryonEmpty">請先完成臉部分析。</div></div>
+          <div class="panel controls-panel">
+            <h3 data-i18n="lipColor">唇色</h3><div class="swatches" id="lipSwatches"></div>
+            <h3 data-i18n="blushColor">腮紅</h3><div class="swatches" id="blushSwatches"></div>
+            <label><span data-i18n="intensity">強度</span><input id="tryonIntensity" type="range" min="10" max="80" value="42" /></label>
+            <button id="resetTryon" class="secondary-btn full" data-i18n="reset">重設</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="after">
+        <div class="page-head"><span class="eyebrow">AFTER MAKEUP CHECK</span><h2 data-i18n="afterTitle">化完妝，再分析一次</h2><p data-i18n="afterSub">用相機拍完成照，VIBEA 會從影像中的左右平衡、膚色均勻度與妝容對比提供中性建議。</p></div>
+        <div class="camera-layout">
+          <div class="camera-card">
+            <label class="upload-zone compact"><input id="afterPhotoInput" type="file" accept="image/*" capture="user" hidden><span data-i18n="afterUpload">拍照 / 上傳完成妝</span></label>
+            <img id="afterPreview" class="after-preview" hidden alt="after makeup preview" />
+            <button id="afterAnalyzeBtn" class="primary-btn full" disabled data-i18n="analyzeFinish">分析完成度</button>
+          </div>
+          <div id="afterResult" class="panel" hidden><h3 data-i18n="finishReport">完成妝報告</h3><div id="afterScore"></div><ul id="afterTips"></ul></div>
+        </div>
+      </section>
+
+      <section class="page" id="wardrobe">
+        <div class="page-head"><span class="eyebrow">STYLE THE LOOK</span><h2 data-i18n="wardrobeTitle">穿搭推薦</h2><p data-i18n="wardrobeSub">依妝容 vibe 搭配穿搭。商品按鈕連到品牌官方網站或商品頁。</p></div>
+        <div class="filter-bar"><select id="outfitStyleFilter"><option value="all">All</option><option value="clean">Clean</option><option value="korean">Korean</option><option value="editorial">Editorial</option><option value="y2k">Y2K</option></select></div>
+        <div class="outfit-grid" id="outfitGrid"></div>
+      </section>
+
+      <section class="page" id="shop">
+        <div class="page-head"><span class="eyebrow">SMART SHOP</span><h2 data-i18n="shopTitle">依預算、風格與膚質篩選</h2><p data-i18n="shopSub">VIBEA 優先顯示符合你條件的產品，而不是無限推新品。</p></div>
+        <div class="shop-filters">
+          <label><span data-i18n="budget">預算</span><select id="budgetFilter"><option value="all">All</option><option value="1000">≤ NT$1,000</option><option value="1500">≤ NT$1,500</option><option value="2500">≤ NT$2,500</option></select></label>
+          <label><span data-i18n="shopStyle">風格</span><select id="styleFilter"><option value="all">All</option><option value="korean">Korean</option><option value="japanese">Japanese</option><option value="clean">Clean</option><option value="editorial">Editorial</option></select></label>
+          <label><span data-i18n="skinType">膚質</span><select id="skinFilter"><option value="all">All</option><option value="dry">Dry</option><option value="oily">Oily</option><option value="combination">Combination</option><option value="normal">Normal</option></select></label>
+          <label><span data-i18n="productCategory">類別</span><select id="categoryFilter"><option value="all">All</option><option value="base">Base</option><option value="blush">Blush</option><option value="lip">Lip</option><option value="eye">Eye</option></select></label>
+        </div>
+        <div id="productGrid" class="product-grid"></div>
+      </section>
+
+      <section class="page" id="reviews">
+        <div class="page-head"><span class="eyebrow">COMMUNITY REVIEWS</span><h2 data-i18n="reviewTitle">產品評價</h2><p data-i18n="reviewSub">你可以留下使用心得。系統會偵測連結、折扣碼、#ad、業配等常見推廣訊號，將可疑內容標記並預設排除。</p></div>
+        <div class="review-layout">
+          <form id="reviewForm" class="panel form-panel">
+            <label><span data-i18n="reviewProduct">產品</span><select id="reviewProduct"></select></label>
+            <label><span data-i18n="rating">評分</span><select id="reviewRating"><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option><option value="1">1</option></select></label>
+            <label><span data-i18n="reviewText">心得</span><textarea id="reviewText" required maxlength="800" placeholder="Tell us what worked and what didn't..."></textarea></label>
+            <label class="consent-line"><input id="reviewDisclosure" type="checkbox"><span data-i18n="receivedGift">我有收受贈品、合作或其他利益</span></label>
+            <button class="primary-btn" type="submit" data-i18n="submitReview">送出評價</button>
+            <small data-i18n="filterNote">自動過濾只能找出明顯推廣訊號，不能保證辨識所有業配。</small>
+          </form>
+          <div class="panel"><div class="panel-head"><h3 data-i18n="communityReviews">社群評價</h3><label class="switch-line"><input id="showFlagged" type="checkbox"><span data-i18n="showFlagged">顯示可能推廣內容</span></label></div><div id="reviewList" class="review-list"></div></div>
+        </div>
+      </section>
+
+      <section class="page" id="learn">
+        <div class="page-head"><span class="eyebrow">BEAUTY PROGRESS</span><h2 data-i18n="learnTitle">像健身 App 一樣記錄你的妝容成長</h2><p data-i18n="learnSub">記錄學會的妝、常出錯步驟與最近最常使用的風格。</p></div>
+        <div class="progress-grid">
+          <article class="stat-card"><span data-i18n="learnedLooks">已學會</span><strong id="learnedCount">0</strong></article>
+          <article class="stat-card"><span data-i18n="practiceCount">練習次數</span><strong id="practiceCount">0</strong></article>
+          <article class="stat-card"><span data-i18n="favoriteStyle">近期風格</span><strong id="favoriteStyle">—</strong></article>
+        </div>
+        <div class="learn-layout"><div class="panel"><h3 data-i18n="lookChecklist">妝容清單</h3><div id="learningLookList"></div></div><div class="panel"><h3 data-i18n="mistakes">最常卡住的步驟</h3><div id="mistakeList"></div><button id="addPracticeBtn" class="secondary-btn full" data-i18n="logPractice">記錄一次練習</button></div></div>
+      </section>
+
+      <section class="page" id="celebrity">
+        <div class="page-head"><span class="eyebrow">INSPIRED LOOKS</span><h2 data-i18n="celebTitle">明星感妝容靈感</h2><p data-i18n="celebSub">以公開流行美學整理「同 vibe」方向，不代表明星本人合作或指定使用任何產品。</p></div>
+        <div id="celebGrid" class="saved-grid"></div>
+      </section>
+
+      <section class="page" id="news">
+        <div class="page-head"><span class="eyebrow">BEAUTY SAFETY & NEWS</span><h2 data-i18n="newsTitle">美妝新聞與成分安全</h2><p data-i18n="newsSub">優先連結監管機關與科學安全資料。這裡提供的是資訊，不取代醫療建議。</p></div>
+        <div id="newsGrid" class="news-grid"></div>
+      </section>
+
+      <section class="page" id="profile">
+        <div class="page-head"><span class="eyebrow">MY VIBEA</span><h2 data-i18n="profileTitle">我的資料</h2><p data-i18n="profileSub">這個 GitHub Pages 版本把偏好與學習紀錄保存在你的瀏覽器 localStorage。</p></div>
+        <div class="settings-list">
+          <button data-go="bag"><span data-i18n="myBag">我的化妝包</span><span>›</span></button>
+          <button data-go="learn"><span data-i18n="myProgress">我的學習紀錄</span><span>›</span></button>
+          <button data-go="reviews"><span data-i18n="myReviews">我的評價</span><span>›</span></button>
+          <button id="clearLocalData"><span data-i18n="deleteData">清除這台裝置上的 VIBEA 資料</span><span>›</span></button>
+        </div>
+      </section>
+    </main>
+
+    <nav class="mobile-nav">
+      <button data-go="home" data-i18n="navHome">首頁</button>
+      <button data-go="looks" data-i18n="navLooks">妝容</button>
+      <button class="nav-main" data-go="analyze">＋</button>
+      <button data-go="bag" data-i18n="bagShort">化妝包</button>
+      <button data-go="profile" data-i18n="me">我的</button>
+    </nav>
+
+    <footer>
+      <div><b>VIBEA</b><span data-i18n="footerLine">Beauty should feel useful, not pushy.</span></div>
+      <div class="footer-links"><button data-go="news" data-i18n="news">美妝新聞</button><button data-go="reviews" data-i18n="reviews">產品評價</button><button data-go="celebrity" data-i18n="inspired">明星感妝容</button></div>
+    </footer>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
